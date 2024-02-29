@@ -17,6 +17,7 @@ CREATE TABLE Bookings (
 	,Num_Adults SMALLINT NOT NULL
 	,Num_Children SMALLINT NOT NULL
 	,Guest_ID VARCHAR(10) UNIQUE
+--TODO: Minor_Safety check doesn't work as intended.
 -- 	,CONSTRAINT Minor_Safety CHECK (
 -- 		(
 -- 			Num_Adults < 1
@@ -58,6 +59,7 @@ CREATE TABLE Prior_Bookings (
 	,Repeat_Guest SMALLINT NOT NULL
 	,Num_Prev_Cancels SMALLINT NOT NULL
 	,Num_Prev_Stays SMALLINT NOT NULL
+--TODDO: Repeat_Yes Check does not work as intended.
 --	,CONSTRAINT Repeat_Yes CHECK (Repeat_Guest = 1)
 -- 	,--Right now my best idea is moving it here to check if repeat guest is 1 which means yes
 -- 	CONSTRAINT Repeat_Status CHECK (
@@ -81,10 +83,10 @@ CREATE TABLE Timeslot (
 	,Arrival_Year NUMERIC(4, 0) NOT NULL
 	,Arrival_Month INT NOT NULL
 	,Arrival_Date SMALLINT NOT NULL
-	,CONSTRAINT Max_Stay CHECK (
-		Num_Weekdays <= 5
-		AND Num_Weekends <= 2
-		) --Verifies booking is for isn't more than a week
+-- 	,CONSTRAINT Max_Stay CHECK (
+-- 		Num_Weekdays <= 5
+-- 		AND Num_Weekends <= 2
+--		) --Verifies booking is for isn't more than a week
 -- 	,CONSTRAINT Days CHECK (
 -- 		(
 -- 			Arrival_Month = 2
