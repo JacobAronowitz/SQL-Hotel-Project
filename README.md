@@ -69,6 +69,10 @@ Timeslot: The logic behind this table is to show how long the booking is for. A 
 Amenities: The logic behind this table is to check whether the guest has requested any amenities alongside their stay such as a meal plan or a parking space
 
 
-
 Data Population: The data was provided through a CSV datasheet found on Kaggle which was ported into Excel, each column was then into tables that made sense. The Original datasheet did not provide guest names and IDs, so the guest info table was randomly generated with names (first name and last name) and randomized IDs for the guest info.
 
+# How To Use:
+In order to use the system, open the DDL file first in software like PostgreSQL, then run the DDL to create the tables. Once the tables have been created, open the Population file and populate the data. After completing both steps, the database is now ready for querying.
+
+# Contributions:
+This is not an open-source project, outside contributions will not be accepted.
