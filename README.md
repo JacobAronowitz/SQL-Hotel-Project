@@ -68,3 +68,5 @@ Amenities: The logic behind this table is to check whether the guest has request
 
 
 Data Population: The data was provided through a CSV datasheet found on Kaggle which was ported into Excel, each column was then into tables that made sense. The Original datasheet did not provide guest names and IDs, so the guest info table was randomly generated with names (first name and last name) and randomized IDs for the guest info.
+
+[![OpenSSF Scorecard](htt‌ps://api.securityscorecards.dev/projects/github.com/JacobAronowitz/SQL-Hotel-Project-Group-4/badge)](htt‌ps://securityscorecards.dev/viewer/?uri=github.com/JacobAronowitz/SQL-Hotel-Project-Group-4)
