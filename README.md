@@ -1,7 +1,7 @@
 # SQL-Hotel-Project
 
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/JacobAronowitz/SQL-Hotel-Project-Group-4/badge)](https://securityscorecards.dev/viewer/?uri=github.com/JacobAronowitz/SQL-Hotel-Project-Group-4)
-[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8563/badge)](https://www.bestpractices.dev/projects/8563)
+
 
 A Hotel Management Database complete with Queries and DDL
 
