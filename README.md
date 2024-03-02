@@ -75,4 +75,11 @@ Data Population: The data was provided through a CSV datasheet found on Kaggle w
 In order to use the system, open the DDL file first in software like PostgreSQL, then run the DDL to create the tables. Once the tables have been created, open the Population file and populate the data. After completing both steps, the database is now ready for querying.
 
 # Contributions:
-This is not an open-source project, outside contributions will not be accepted.
+Before a contribution is made using a pull request, contact me at JacobAronowitzMail@gmail.com so we can discuss what is being added.
+Acceptable contributions must:
+1) Change the DDL, Queries, or Inserts in a significant way.
+2) Address an issue or to-do list in the SQL file being contributed to.
+3) The contribution must not cause the rest of the SQL to break.
+
+# Bug Reporting:
+All bugs must be reported to JacobAronowitzMail@gmail.com with a summary of the bug and the name of the SQL file where it was found.
