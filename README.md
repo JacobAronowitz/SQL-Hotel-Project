@@ -81,5 +81,5 @@ Acceptable contributions must:
 2) Address an issue or to-do list in the SQL file being contributed to.
 3) The contribution must not cause the rest of the SQL to break.
 
-# Bug Reporting:
-All bugs must be reported to JacobAronowitzMail@gmail.com with a summary of the bug and the name of the SQL file where it was found.
+# Bug and Vulnerability Reporting:
+All bugs and vulnerabilities must be reported to JacobAronowitzMail@gmail.com with a summary of the bug and the name of the SQL file where it was found.
