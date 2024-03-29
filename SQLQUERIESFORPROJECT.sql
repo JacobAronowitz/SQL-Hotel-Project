@@ -1,8 +1,9 @@
 --ALL GUESTS THAT HAVE HAD a prior booking SORTED BY date 
 CREATE VIEW repeatedguests AS 
-SELECT bookings.guest_id, bookings.booking_id, timeslot.arrival_year, timeslot.arrival_month, timeslot.arrival_date 
+SELECT bookings.guest_id, guest_info.first_name, guest_info.last_name, bookings.booking_id, timeslot.arrival_year, timeslot.arrival_month, timeslot.arrival_date 
 FROM bookings INNER JOIN timeslot ON bookings.booking_id = timeslot.booking_id
 INNER JOIN prior_bookings ON bookings.guest_id = prior_bookings.guest_id
+INNER JOIN guest_info ON guest_info.guest_id = bookings.guest_id
 WHERE repeat_guest = 1
 ORDER BY arrival_year, arrival_month, arrival_date;
 --Call view
