@@ -8,8 +8,11 @@ CREATE TABLE Guest_Info (
 	Guest_ID VARCHAR(10) UNIQUE
 	,First_Name VARCHAR(30) NOT NULL
 	,Last_Name VARCHAR(30) NOT NULL
-	,--Should add some sort of check to make sure there aren't too many uses of a name but idk yet how
-	PRIMARY KEY (Guest_ID)
+	CONSTRAINT Repeat_Status CHECK (
+		Repeat_Guest = 1
+		OR Repeat_Guest = 0
+		)
+	,PRIMARY KEY (Guest_ID)
 	);
 
 CREATE TABLE Bookings (
@@ -54,22 +57,17 @@ CREATE TABLE Rooms (
 	,FOREIGN KEY (Booking_ID) REFERENCES Bookings(Booking_ID) ON DELETE SET NULL
 	);
 
-CREATE TABLE Prior_Bookings (
-	Guest_ID VARCHAR(10) UNIQUE
-	,Repeat_Guest SMALLINT NOT NULL
-	,Num_Prev_Cancels SMALLINT NOT NULL
-	,Num_Prev_Stays SMALLINT NOT NULL
---TODDO: Repeat_Yes Check does not work as intended.
---	,CONSTRAINT Repeat_Yes CHECK (Repeat_Guest = 1)
--- 	,--Right now my best idea is moving it here to check if repeat guest is 1 which means yes
--- 	CONSTRAINT Repeat_Status CHECK (
+-- CREATE TABLE Prior_Bookings (
+-- 	Guest_ID VARCHAR(10) UNIQUE
+-- 	,Repeat_Guest SMALLINT NOT NULL
+-- 	,Num_Prev_Cancels SMALLINT NOT NULL
+-- 	,Num_Prev_Stays SMALLINT NOT NULL
+-- CONSTRAINT Repeat_Status CHECK (
 -- 		Repeat_Guest = 1
 -- 		OR Repeat_Guest = 0
 -- 		)
-	,--but then I don't know how to make it bounded to either 1 or 0, this line DOES work, but idk
-	--how well it'll work when data population starts 
-	FOREIGN KEY (Guest_ID) REFERENCES Guest_Info(Guest_ID) ON DELETE SET NULL
-	);
+-- 	,FOREIGN KEY (Guest_ID) REFERENCES Guest_Info(Guest_ID) ON DELETE SET NULL
+-- 	);
 
 
 --"foreign key (Repeat_Guest) references Guest_Info(Repeat_Guest)" doesn't work
